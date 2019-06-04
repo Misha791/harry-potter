@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	
+	<div style=" width: 1000px; margin-left: auto; margin-right: auto; margin-top: 200px;" class="step1">
+		
+		
+
+			<img src="door.png" style="margin-right: 50px; width: 300px;"  alt="" class="door1">
+			
+	
+			<img src="door2.png" style="margin-right: 50px; width: 200px;"  alt="" class="door2">
+	
+			<img src="door3.png" style="margin-right: 50px; width: 200px;"  alt="" class="door3">
+	
+	</div>
+
+	<div class="harrypotter" style="background-image: url(bg.jpg); display: none; height: 1000px; background-size: 100% 100%">
+		<h1 style="font-size: 50px; color: white;">Помоги Гарри найти его метлу, плащ и палочку! Надо заработать 3 очка! </h1>
+		<h1 class="score" style="font-size: 50px; color: white">
+			0
+		</h1>
+		
+			<img src="palochka.png" class="palochka" style="margin-left: 36%; position: absolute; margin-top: 500px;">
+		
+			<img src="metla.png" width="100px" class="metla" style="position: absolute; margin-left: 80%; margin-top: 30%">
+
+			<img src="mantiya.png" width="100px" class="mantiya" style="position: absolute; margin-top: 32%; margin-left: 42%">
+
+			<a href="index.html">
+				<img src="gun.png" width="100px" class="gun" style="position: absolute;margin-left:17%; margin-top:28%;">
+			</a>
+			<img src="ring.png" style="position: absolute; width: 50px; margin-left: 60%; margin-top: 33%">
+
+			<button class="btn_hurrypotter btn btn-success">Выйти из игры</button>
+			
+	</div>
+
+
+	<script type="text/javascript">
+		let point = 0;
+		//вход
+		document.querySelector(".door1").onclick = function(){
+			alert("Добро пожаловать в Хогвартс!");
+			document.querySelector(".step1").style.display = "none";
+			document.querySelector(".harrypotter").style.display = "block"		
+		}
+		 document.querySelector(".door2").onclick = function(){
+		 	alert("Дверь закрыта");
+		 }
+		 document.querySelector(".door3").onclick = function(){
+		 	alert("Дверь закрыта");
+		 }
+
+	
+
+		 //локация гарри поттера
+		  document.querySelector(".palochka").onclick = function(){
+		 	document.querySelector(".palochka").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+		 	
+		 	
+		 }
+		  document.querySelector(".metla").onclick = function(){
+		 	document.querySelector(".metla").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+		 	
+		 	
+		 }
+		  document.querySelector(".mantiya").onclick = function(){
+		 	document.querySelector(".mantiya").style.display = "none"
+		 	point=point+1;
+		 	document.querySelector(".score").innerHTML = point;
+		 
+		}
+		  document.querySelector(".gun").onclick = function(){
+		 	alert("Попробуй еще раз");
+
+		}
+		  document.querySelector(".btn_hurrypotter").onclick = function(){
+		  	 document.querySelector(".harrypotter").style.display = "none";
+		  	 document.querySelector(".step1").style.display = "block";
+		  }
+
+	</script>
+</body>
+</html>
